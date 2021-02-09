@@ -9,11 +9,10 @@
   <meta name="keywords" content="ทรัพย์ศิริ">
   <meta name="author" content="Cyber Winner">
 
-
   <!-- ===============================================-->
   <!--    Document Title-->
   <!-- ===============================================-->
-  <title>หน้าแรก | ทรัพย์ศิริ</title>
+  <title>รายละเอียดสินค้า | ทรัพย์ศิริ</title>
 
 
   <!-- ===============================================-->
@@ -44,9 +43,9 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
-  <main class="main" id="banner-slide">
+  <main class="main">
 
-    <section class="py-0">
+    <section class="py-0" id="banner-slide">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
