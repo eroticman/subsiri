@@ -13,7 +13,7 @@ require_once 'auth.php';
 			<i class="icon wb-more-horizontal" aria-hidden="true"></i>
 		</button>
 		<div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-			<span class="navbar-brand-text hidden-xs-down"> X Home Car </span>
+			<span class="navbar-brand-text hidden-xs-down"> Subsiri </span>
 		</div>
 	</div>
 
@@ -66,98 +66,23 @@ require_once 'auth.php';
 								<i class="site-menu-icon icon fa-home" aria-hidden="true"></i>
 								<span class="site-menu-title">ระบบจัดการข้อมูล</span>
 							</a>
-						</li><li class="site-menu-item has-sub <?php echo ( in_array($current_file, array('slide.php', 'slide_add.php', 'slide_edit.php', 'video.php', 'video_edit.php') ) ) ? 'active open' : ''; ?>">
-							<a href="javascript:void(0)">
-								<i class="site-menu-icon icon fa-play-circle-o" aria-hidden="true"></i>
+						</li>
+						<li class="site-menu-item <?php echo ( in_array($current_file, array('banner.php', 'banner_add.php', 'banner_edit.php') ) ) ? 'active' : ''; ?>">
+							<a class="animsition-link" href="banner.php">
+								<i class="site-menu-icon icon fa-image" aria-hidden="true"></i>
 								<span class="site-menu-title">แบนเนอร์</span>
-								<span class="site-menu-arrow"></span>
-							</a>
-							<ul class="site-menu-sub">
-								<li class="site-menu-item <?php echo ( in_array($current_file, array('slide.php', 'slide_add.php', 'slide_edit.php') ) ) ? 'active' : ''; ?>">
-									<a class="animsition-link" href="slide.php">
-										<span class="site-menu-title">รูปภาพสไลด์</span>
-									</a>
-								</li>
-								<li class="site-menu-item <?php echo ( in_array($current_file, array('video.php', 'video_edit.php') ) ) ? 'active' : ''; ?>">
-									<a class="animsition-link" href="video.php">
-										<span class="site-menu-title">วิดีโอ</span>
-									</a>
-								</li>
-							</ul>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('article.php', 'article_add.php', 'article_edit.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="article.php">
-								<i class="site-menu-icon icon fa-paper-plane" aria-hidden="true"></i>
-								<span class="site-menu-title">บทความ</span>
 							</a>
 						</li>
-						<li class="site-menu-item has-sub <?php echo ( in_array($current_file, array('product.php', 'product_add.php', 'product_edit.php', 'product-b.php', 'product-badd.php', 'product-bedit.php') ) ) ? 'active open' : ''; ?>">
-							<a href="javascript:void(0)">
-								<i class="site-menu-icon icon fa-car" aria-hidden="true"></i>
-								<span class="site-menu-title">รถยนต์</span>
-								<span class="site-menu-arrow"></span>
+						<li class="site-menu-item <?php echo ( in_array($current_file, array('product.php', 'product_add.php', 'product_edit.php') ) ) ? 'active' : ''; ?>">
+							<a class="animsition-link" href="product.php">
+								<i class="site-menu-icon icon fa-product-hunt" aria-hidden="true"></i>
+								<span class="site-menu-title">สินค้า</span>
 							</a>
-							<ul class="site-menu-sub">
-								<li class="site-menu-item <?php echo ( in_array($current_file, array('product.php', 'product_add.php', 'product_edit.php', 'product_detail.php') ) ) ? 'active' : ''; ?>">
-									<a class="animsition-link" href="product.php">
-										<span class="site-menu-title">รถใหม่</span>
-									</a>
-								</li>
-								<li class="site-menu-item <?php echo ( in_array($current_file, array('product-b.php', 'product-badd.php', 'product-bedit.php') ) ) ? 'active' : ''; ?>">
-									<a class="animsition-link" href="product-b.php">
-										<span class="site-menu-title">ลูกค้าของเรา</span>
-									</a>
-								</li>
-							</ul>
 						</li>
 						<li class="site-menu-item <?php echo ( in_array($current_file, array('customer.php', 'customer_add.php', 'customer_edit.php') ) ) ? 'active' : ''; ?>">
 							<a class="animsition-link" href="customer.php">
-								<i class="site-menu-icon icon fa-search-plus" aria-hidden="true"></i>
-								<span class="site-menu-title">เสียงจากลูกค้า</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('booking_all.php', 'booking_add.php', 'booking_edit.php', 'booking_detail.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="booking_all.php">
-								<i class="site-menu-icon icon fa-book" aria-hidden="true"></i>
-								<span class="site-menu-title">รายการจองรถ</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('booking_history_foradmin.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="booking_history_foradmin.php">
-								<i class="site-menu-icon icon fa-history" aria-hidden="true"></i>
-								<span class="site-menu-title">รายการจองทั้งหมด</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('user.php', 'user_add.php', 'user_edit.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="user.php">
-								<i class="site-menu-icon icon fa-user-plus" aria-hidden="true"></i>
-								<span class="site-menu-title">สมาชิก</span>
-							</a>
-						</li>
-
-						<?php else : ?>  <!-- for sale -->
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('product.php', 'product_detail.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="product.php">
-								<i class="site-menu-icon icon fa-car" aria-hidden="true"></i>
-								<span class="site-menu-title">รถยนต์</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('sale_customer.php', 'sale_customer_add.php', 'sale_customer_edit.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="sale_customer.php">
-								<i class="site-menu-icon icon fa-user-plus" aria-hidden="true"></i>
-								<span class="site-menu-title">รายชื่อลูกค้า</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('booking.php', 'booking_add.php', 'booking_edit.php', 'booking_detail.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="booking.php">
-								<i class="site-menu-icon icon fa-book" aria-hidden="true"></i>
-								<span class="site-menu-title">การจองรถ</span>
-							</a>
-						</li>
-						<li class="site-menu-item <?php echo ( in_array($current_file, array('booking_history.php') ) ) ? 'active' : ''; ?>">
-							<a class="animsition-link" href="booking_history.php">
-								<i class="site-menu-icon icon fa-history" aria-hidden="true"></i>
-								<span class="site-menu-title">รายการจองทั้งหมด</span>
+								<i class="site-menu-icon icon fa-user-circle" aria-hidden="true"></i>
+								<span class="site-menu-title">ลูกค้าของเรา</span>
 							</a>
 						</li>
 					<?php endif ?>

@@ -6,7 +6,7 @@
 
 .site-navbar .navbar-header {
   color: #fff;
-  background-color: #dbbb5f;
+  background-color: #07528d;
 }
 
 @media (min-width: 768px) {
@@ -138,7 +138,7 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background-color: #dbbb5f;
+  background-color: #07528d;
 }
 
 .site-menubar-footer > a:hover, .site-menubar-footer > a:focus {
@@ -221,7 +221,7 @@ body {
 
 .site-menu-item a {
   display: block;
-  color: #dbbb5f;
+  color: #07528d;
 }
 
 .site-menu-item.is-hidden {
@@ -242,32 +242,32 @@ body {
 
 .site-menu > .site-menu-item.open > a {
   color: #fff;
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .site-menu > .site-menu-item.open.hover > a {
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .site-menu > .site-menu-item.hover > a, .site-menu > .site-menu-item:hover > a {
   color: white;
-  background: #dbbb5f;
+  background: #07528d;
   /*background-color: black;*/
 }
 
 .site-menu > .site-menu-item.active {
-  background: #dbbb5f;
+  background: #07528d;
   /*border-top: 1px solid rgba(0, 0, 0, .04);
   border-bottom: 1px solid rgba(0, 0, 0, .04);*/
 }
 
 .site-menu > .site-menu-item.active > a {
   color: #fff;
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .site-menu > .site-menu-item.active.hover > a {
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .site-menu .site-menu-sub {
@@ -306,11 +306,11 @@ body {
 
 .site-menu .site-menu-sub .site-menu-item.hover > a, .site-menu .site-menu-sub .site-menu-item:hover > a {
   color: rgba(255, 255, 255);
-  background-color: #dbbb5f;
+  background-color: #07528d;
 }
 
 .site-menu .site-menu-sub .site-menu-item.active {
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .site-menu .site-menu-sub .site-menu-item.active > a {
@@ -6323,7 +6323,7 @@ body.site-navbar-small {
 }
 
 .blue-grey-800 {
-  color: #dbbb5f !important;
+  color: #07528d !important;
 }
 
 .blue-grey-900 {
@@ -7620,7 +7620,7 @@ body.site-navbar-small {
 }
 
 .navbar-default .hamburger:before, .navbar-default .hamburger .hamburger-bar, .navbar-default .hamburger:after {
-  background: #dbbb5f;
+  background: #07528d;
 }
 
 .navbar-inverse .hamburger:before, .navbar-inverse .hamburger .hamburger-bar, .navbar-inverse .hamburger:after {

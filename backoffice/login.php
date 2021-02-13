@@ -5,11 +5,11 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Log In | X Home Car</title>
+  <title>Log In | ทรัพย์ศิริ</title>
   <link href="assets/login/css/fontface.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/login/css/reset.min.css">
   <link rel="stylesheet" href="assets/login/css/style.css">
-	<link rel="shortcut icon" type="../image/png" href="../images/fav.png"/>
+	<link rel="shortcut icon" type="../assets/img/png" href="../assets/img/fav.jpg"/>
 
 </head>
 <body>
@@ -23,9 +23,9 @@
   <div class="user_options-container">
     <div class="user_options-text">
       <div class="user_options-unregistered">
-				<img class="brand-img" src="assets/images/logo.png" alt="...">
-        <h2 class="user_unregistered-title">Back Office X Home Car</h2>
-        <p class="user_unregistered-text">Copyright © 2020 All RIGHT RESERVED</p>
+				<img class="brand-img" src="assets/images/logo.jpg" alt="..."><br><br>
+        <h2 class="user_unregistered-title">Back Office Subsiri</h2>
+        <p class="user_unregistered-text">Copyright © 2021 All RIGHT RESERVED</p>
       </div>
     </div>
     

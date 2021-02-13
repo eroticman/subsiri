@@ -7,10 +7,10 @@
 	<meta name="description" content="bootstrap admin template">
 	<meta name="author" content="">
 
-	<title>Home | X Home Car </title>
+	<title>Home | ทรัพย์ศิริ </title>
 
 	<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-	<link rel="shortcut icon" type="../image/png" href="../images/fav.png"/>
+	<link rel="shortcut icon" type="../assets/img/png" href="../assets/img/fav.jpg"/>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -56,7 +56,7 @@
 		<div class="page-header h-300 mb-30">
       		<div class="text-center blue-grey-800 m-0 mt-50">
 		        <div class="font-size-50 mb-30 blue-grey-800">
-					<img src="assets/images/logo.png" class="img-index"> </br>
+					<img src="assets/images/logo.jpg" class="img-index"> </br>
 					<?php if ($_SESSION['user']['group_id'] == 1) : ?>
 						<p>Administrator</p>
 					<?php else : ?>
@@ -65,7 +65,7 @@
 				</div>
 		        <ul class="list-inline font-size-20">
 		          	<li class="list-inline-item">
-			            <i class="icon wb-settings mr-5" aria-hidden="true"></i> Back Office X Home Car
+			            <i class="icon wb-settings mr-5" aria-hidden="true"></i> Back Office ทรัพย์ศิริ
 			        </li>
 		        </ul>
       		</div>
