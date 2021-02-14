@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="จำหน่ายอุปกรณ์การสื่อสาร สำหรับงานติดตั้ง เดินระบบสายสัญญาณ ภายนอก ภายในอาคาร ราคาถูก คุณภาพดี">
+  <meta name="description"
+    content="จำหน่ายอุปกรณ์การสื่อสาร สำหรับงานติดตั้ง เดินระบบสายสัญญาณ ภายนอก ภายในอาคาร ราคาถูก คุณภาพดี">
   <meta name="keywords" content="ทรัพย์ศิริ">
   <meta name="author" content="Cyber Winner">
 
@@ -45,14 +46,13 @@
   <?php include 'header.php' ?>
   <main class="main">
 
-    <section class="py-0" id="banner-slide">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/banner.jpg" class="d-block w-100" alt="subsiri">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/banner.jpg" class="d-block w-100" alt="subsiri">
+    <section class="py-3" id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="box-header mx-auto">
+              <h1 class="text-white mb-0">ติดต่อเรา</h1>
+            </div>
           </div>
         </div>
       </div>
@@ -60,214 +60,64 @@
 
     <section class="spacer" id="about-us">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
-            <h1 class="fw-bold">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h1>
-            <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-              lacus vel facilisis. </h5>
-            <div class="row justify-content-center">
-              <div class="col-md-9">
-                <div class="row g-2">
-                  <div class="col-md-4">
-                    <button onclick="location.href='tel:099-0547456'"
-                      class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
-                        class="fas fa-phone-square-alt display-5 text-blue d-inline"></i>
-                      <h4 class="position-relative d-inline top-5"> 099-0547456</h4>
-                    </button>
-                  </div>
-                  <div class="col-md-4">
-                    <button onclick="location.href=''"
-                      class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
-                        class="fab fa-line display-5 text-blue d-inline"></i>
-                      <h4 class="position-relative d-inline top-5"> sub_siri99</h4>
-                    </button>
-                  </div>
-                  <div class="col-md-4">
-                    <button onclick="location.href=''"
-                      class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
-                        class="fab fa-facebook display-5 text-blue d-inline"></i>
-                      <h4 class="position-relative d-inline top-5"> บ.ทรัพย์ศิริ จำกัด</h4>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-5">
+            <h2 class="text-white bg-blue p-2 mb-3">ข้อมูลติดต่อ</h2>
+            <h3 class="fw-bolder">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h3>
+            <h4><i class="fas fa-home text-blue"></i> : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</h4>
+            <h4><i class="far fa-clock text-blue"></i> : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</h4>
+            <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
+                href="tel:02-1590325">02-1590325</a></h4>
+            <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
+                href="tel:094-6474982">094-6474982</a></h4>
+            <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
+                href="tel:099-0547456">099-0547456</a></h4>
+          </div>
+          <div class="col-md-7">
+            <iframe class="border shadow"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.8438232957105!2d100.68691311534859!3d14.027270194628326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d803c4167a9c9%3A0x1a5fdd6be9e67574!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4l-C4o-C4seC4nuC4ouC5jOC4qOC4tOC4o-C4tCDguYDguJfguKPguJTguJTguLTguYnguIcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1613285413441!5m2!1sth!2sth"
+              width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
           </div>
         </div>
-      </div>
-    </section>
-
-
-    <section class="bg-gray spacer" id="best-sale">
-      <div class="container">
         <div class="row">
-          <div class="col-12 text-center mb-md-4 mb-3">
-            <h1 class="fw-bolder text-blue">สินค้าขายดี</h1>
-            <div class="underline">
-              <span>
-              </span>
+          <div class="col-12">
+            <h2 class="text-white text-center bg-blue p-2 mb-3">ส่งข้อความถึงเรา</h2>
+            <div class="card border rounded shadow p-3">
+              <form method="POST" action="">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">ชื่อ</label>
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">อีเมล์</label>
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">เบอร์โทรศัพท์</label>
+                    <input type="text" class="form-control" placeholder="Phone Number">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">เรื่องติดต่อ</label>
+                    <input type="text" class="form-control" placeholder="Subject">
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">รายละเอียด</label>
+                    <textarea class="form-control" id="" rows="3" placeholder="Description"></textarea>
+                  </div>
+                  <div class="col-12 mt-3 text-center">
+                    <button type="submit" class="btn btn-primary  col-md-4">ส่งข้อความ</button>
+                  </div>
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="col-12 mb-md-4 mb-3">
-            <div class="carousel-wrap owl-theme">
-              <div class="owl-carousel owl-theme">
-                <div class="item">
-                  <a href="">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 text-center">
-            <button onclick="location.href=''" class="btn btn-outline-primary">ดูทั้งหมด</button>
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="spacer" id="customer">
-      <div class="container">
-        <div class="row g-2 justify-content-center">
-          <div class="col-12 text-center mb-md-4 mb-3">
-            <h1 class="fw-bolder text-white">ลูกค้าของเรา</h1>
-            <div class="underline">
-              <span>
-              </span>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="customer-img">
-                <img src="assets/img/customer/cus.jpg" class="d-block w-100" alt="subsiri">
-              </div>
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-              <div class="customer-img">
-                <img src="assets/img/customer/67495447_922426294798671_4745372304354050048_o.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="customer-img">
-                <img src="assets/img/customer/SCG-EXPRESS_COOL-TA-Q-BIN-4-780x437.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 text-center">
-            <button onclick="location.href=''" class="btn btn-outline-light">ดูทั้งหมด</button>
-          </div>
-
-        </div>
-      </div><!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-    <section class="spacer my-md-5" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 text-center mx-auto">
-            <img src="assets/img/icon/like.png" class="w-25" alt="subsiri">
-            <h3 class="fw-bold text-blue pt-3">สินค้าคุณภาพดี มาตรฐาน</h3>
-          </div>
-          <div class="col-md-4 text-center mx-auto">
-            <img src="assets/img/icon/true.png" class="w-25" alt="subsiri">
-            <h3 class="fw-bold text-blue pt-3">ราคาถูก ราคาประหยัด</h3>
-          </div>
-          <div class="col-md-4 text-center mx-auto">
-            <img src="assets/img/icon/numberone.png" class="w-25" alt="subsiri">
-            <h3 class="fw-bold text-blue pt-3">ลูกค้าไว้วางใจอันดับ 1</h3>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <?php include 'footer.php'?>
 

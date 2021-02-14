@@ -3926,14 +3926,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #458FF6;
-  border-color: #458FF6;
+  background-color: #07528d;
+  border-color: #07528d;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #3b7ad1;
-  border-color: #3772c5;
+  color: #07528d;
+  background-color: #fff;
+  border-color: #07528d;
 }
 
 .btn-check:focus+.btn-primary,
@@ -20960,6 +20960,22 @@ label {
   background-image: url('../img/background.jpg');
   background-size: cover;
   background-position: top center;
+}
+
+#header{
+  background-image: url('../img/header.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.box-header{
+  padding: 15px 30px;
+  background-color: #1383ebbd;
+  width: fit-content;
+}
+
+.box-header h1{
+  font-size: 40px;
 }
 
 .content p {

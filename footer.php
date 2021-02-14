@@ -1,13 +1,13 @@
 <footer id="footer" class="py-md-5 py-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 text-white">
+            <div class="col-md-4 text-white">
                 <h3 class="text-white">เกี่ยวกับเรา</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
                     accumsan lacus vel facilisis.</p>
             </div>
-            <div class="col-md-2 text-white">
+            <div class="col-md-3 text-white">
                 <h3 class="text-white">ผังเว็บไซต์</h3>
                 <p>
                     <ul class="list-unstyled">
@@ -22,15 +22,11 @@
             <div class="col-md-5 text-white">
                 <h3 class="text-white">ติดต่อเรา</h3>
                 <h3 class="text-white">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h3>
-                <p>ที่อยู่ : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</p>
-                <p>เวลาทำการ : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</p>
-                <p>เบอร์โทร :
-                    <ul>
-                        <li><a class="text-white" href="tel:02-1590325">02-1590325</a></li>
-                        <li><a class="text-white" href="tel:094-6474982">094-6474982</a></li>
-                        <li><a class="text-white" href="tel:099-0547456">099-0547456</a></li>
-                    </ul>
-                </p>
+                <p class="mb-0">ที่อยู่ : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</p>
+                <p class="mb-0">เวลาทำการ : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</p>
+                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:02-1590325">02-1590325</a></p>
+                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:094-6474982">094-6474982</a></p>
+                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:099-0547456">099-0547456</a></p>
             </div>
         </div>
         <div class="row">
