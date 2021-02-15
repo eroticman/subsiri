@@ -61,10 +61,10 @@
     <section class="spacer" id="about-us">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-6">
+          <div class="col-lg-6 col-md-12 mb-3">
             <img src="assets/img/about.jpg" class="img-fluid rounded shadow-lg" alt="subsiri">
           </div>
-          <div class="col-md-6 text-start my-auto">
+          <div class="col-lg-6 col-md-12 mb-3 text-start my-auto">
             <h2>เกี่ยวกับเรา</h2>
             <h1 class="fw-bold text-blue">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h1>
             <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -93,9 +93,6 @@
   <!--    End of Main Content-->
   <!-- ===============================================-->
 
-
-
-
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
@@ -106,29 +103,6 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
-
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 4,
-          dots: true,
-        }
-      }
-    })
-  </script>
 
 </body>
 

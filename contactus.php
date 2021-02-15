@@ -58,14 +58,14 @@
       </div>
     </section>
 
-    <section class="spacer" id="about-us">
+    <section class="spacer" id="contact-us">
       <div class="container">
         <div class="row mb-5 justify-content-center">
-          <div class="col-md-5">
+          <div class="col-md-5 mb-3">
             <h2 class="text-white bg-blue p-2 mb-3">ข้อมูลติดต่อ</h2>
             <h3 class="fw-bolder">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h3>
-            <h4><i class="fas fa-home text-blue"></i> : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</h4>
-            <h4><i class="far fa-clock text-blue"></i> : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</h4>
+            <h4 class="lh-base"><i class="fas fa-home text-blue"></i> : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</h4>
+            <h4 class="lh-base"><i class="far fa-clock text-blue"></i> : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</h4>
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
                 href="tel:02-1590325">02-1590325</a></h4>
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
@@ -73,7 +73,7 @@
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
                 href="tel:099-0547456">099-0547456</a></h4>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-7 mb-3">
             <iframe class="border shadow"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.8438232957105!2d100.68691311534859!3d14.027270194628326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d803c4167a9c9%3A0x1a5fdd6be9e67574!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4l-C4o-C4seC4nuC4ouC5jOC4qOC4tOC4o-C4tCDguYDguJfguKPguJTguJTguLTguYnguIcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1613285413441!5m2!1sth!2sth"
               width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
@@ -107,7 +107,7 @@
                     <textarea class="form-control" id="" rows="3" placeholder="Description"></textarea>
                   </div>
                   <div class="col-12 mt-3 text-center">
-                    <button type="submit" class="btn btn-primary  col-md-4">ส่งข้อความ</button>
+                    <button type="submit" class="btn btn-primary col-md-3">ส่งข้อความ</button>
                   </div>
                 </div>
               </form>
@@ -127,8 +127,6 @@
   <!-- ===============================================-->
 
 
-
-
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
@@ -139,30 +137,6 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
-
-  <script>
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 4,
-          dots: true,
-        }
-      }
-    })
-  </script>
-
 </body>
 
 </html>

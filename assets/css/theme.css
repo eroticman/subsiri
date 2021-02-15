@@ -131,7 +131,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: calc(1rem + 1.2vw);
+  font-size: calc(1.15rem + 1.2vw);
 }
 
 @media (min-width: 1200px) {
@@ -144,33 +144,33 @@ h1,
 
 h2,
 .h2 {
-  font-size: calc(.85rem + 0.95vw);
+  font-size: calc(1.05rem + 0.95vw);
 }
 
 @media (min-width: 1200px) {
 
   h2,
   .h2 {
-    font-size: 1.55rem;
+    font-size: 1.05rem;
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(.7rem + 0.85vw);
+  font-size: calc(.95rem + 0.85vw);
 }
 
 @media (min-width: 1200px) {
 
   h3,
   .h3 {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 }
 
 h4,
 .h4 {
-  font-size: calc(.5rem + 0.65vw);
+  font-size: calc(.85rem + 0.65vw);
 }
 
 @media (min-width: 1200px) {
@@ -183,7 +183,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1rem;
+  font-size: .75rem;
 }
 
 h6,
@@ -751,6 +751,7 @@ progress {
   .logo {
     max-width: 120px;
   }
+
 }
 
 @media (min-width: 992px) {
@@ -780,6 +781,11 @@ progress {
 
   .logo {
     max-width: 140px;
+  }
+
+  .spacer {
+  
+    padding: 50px 0;
   }
 
 }
@@ -20962,19 +20968,19 @@ label {
   background-position: top center;
 }
 
-#header{
+#header {
   background-image: url('../img/header.jpg');
   background-size: cover;
   background-position: top center;
 }
 
-.box-header{
+.box-header {
   padding: 15px 30px;
   background-color: #1383ebbd;
   width: fit-content;
 }
 
-.box-header h1{
+.box-header h1 {
   font-size: 40px;
 }
 
@@ -20995,18 +21001,65 @@ label {
   max-width: 40px;
 }
 
-#best-sale .card:hover .title{
+#best-sale .card:hover .title {
   background-color: #07528d !important;
   color: #fff !important;
   transition: 0.5s;
 }
 
-#best-sale .card:hover .text-blue{
+#best-sale .card:hover .text-blue {
   color: #fff !important;
   transition: 0.5s;
 }
 
-.nav-link.active{
+#best-sale hr {
+  background-color: #07528d;
+  border: 1px solid #07528d;
+}
+
+.nav-link.active {
   font-weight: 600;
 
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #07528d;
+  border-color: #07528d;
+}
+
+.page-link {
+  color: #07528d;
+}
+
+.text-indent {
+  text-indent: 1.5rem;
+}
+
+#related-product .card h3{
+  font-size: 18px;
+} 
+
+#related-product .card:hover .title {
+  background-color: #07528d !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+
+#related-product .card:hover .text-blue {
+  color: #fff !important;
+  transition: 0.5s;
+}
+
+@media(max-width: 768px){
+  .box-header h1 {
+    font-size: 26px;
+}
+}
+
+@media(max-width: 576px){
+  .box-header h1 {
+    font-size: 24px;
+}
 }

@@ -62,30 +62,30 @@
     <section class="spacer" id="about-us">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
+          <div class="col-lg-10 col-md-12 text-center">
             <h1 class="fw-bold">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h1>
             <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et
               dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
               lacus vel facilisis. </h5>
             <div class="row justify-content-center">
-              <div class="col-md-9">
+              <div class="col-lg-9 col-md-12">
                 <div class="row g-2">
-                  <div class="col-md-4">
+                  <div class="col-lg-4 col-md-4">
                     <button onclick="location.href='tel:099-0547456'"
                       class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
                         class="fas fa-phone-square-alt display-5 text-blue d-inline"></i>
                       <h4 class="position-relative d-inline top-5"> 099-0547456</h4>
                     </button>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-lg-4 col-md-4">
                     <button onclick="location.href=''"
                       class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
                         class="fab fa-line display-5 text-blue d-inline"></i>
                       <h4 class="position-relative d-inline top-5"> sub_siri99</h4>
                     </button>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-lg-4 col-md-4">
                     <button onclick="location.href=''"
                       class="btn btn-light border border-light shadow rounded-0 d-block w-100"><i
                         class="fab fa-facebook display-5 text-blue d-inline"></i>
@@ -115,7 +115,7 @@
             <div class="carousel-wrap owl-theme">
               <div class="owl-carousel owl-theme">
                 <div class="item">
-                  <a href="">
+                  <a href="products-detail">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
@@ -129,7 +129,7 @@
                   </a>
                 </div>
                 <div class="item">
-                  <a href="">
+                  <a href="products-detail">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
@@ -143,7 +143,7 @@
                   </a>
                 </div>
                 <div class="item">
-                  <a href="">
+                  <a href="products-detail">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
@@ -157,7 +157,7 @@
                   </a>
                 </div>
                 <div class="item">
-                  <a href="">
+                  <a href="products-detail">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
@@ -174,7 +174,7 @@
             </div>
           </div>
           <div class="col-12 text-center">
-            <button onclick="location.href=''" class="btn btn-outline-primary">ดูทั้งหมด</button>
+            <button onclick="location.href='products'" class="btn btn-outline-primary">ดูทั้งหมด</button>
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@
           </div>
 
           <div class="col-12 text-center">
-            <button onclick="location.href=''" class="btn btn-outline-light">ดูทั้งหมด</button>
+            <button onclick="location.href='customer'" class="btn btn-outline-light">ดูทั้งหมด</button>
           </div>
 
         </div>
@@ -254,15 +254,15 @@
     <section class="spacer my-md-5" id="services">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-center mx-auto">
+          <div class="col-md-4 mb-3 text-center mx-auto">
             <img src="assets/img/icon/like.png" class="w-25" alt="subsiri">
             <h3 class="fw-bold text-blue pt-3">สินค้าคุณภาพดี มาตรฐาน</h3>
           </div>
-          <div class="col-md-4 text-center mx-auto">
+          <div class="col-md-4 mb-3 text-center mx-auto">
             <img src="assets/img/icon/true.png" class="w-25" alt="subsiri">
             <h3 class="fw-bold text-blue pt-3">ราคาถูก ราคาประหยัด</h3>
           </div>
-          <div class="col-md-4 text-center mx-auto">
+          <div class="col-md-4 mb-3 text-center mx-auto">
             <img src="assets/img/icon/numberone.png" class="w-25" alt="subsiri">
             <h3 class="fw-bold text-blue pt-3">ลูกค้าไว้วางใจอันดับ 1</h3>
           </div>
@@ -301,7 +301,8 @@
       autoplayHoverPause: true,
       responsive: {
         0: {
-          items: 1
+          items: 2,
+          margin: 10,
         },
         600: {
           items: 3
