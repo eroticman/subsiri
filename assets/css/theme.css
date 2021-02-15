@@ -129,73 +129,6 @@ h6,
   color: #000;
 }
 
-h1,
-.h1 {
-  font-size: calc(1.15rem + 1.2vw);
-}
-
-@media (min-width: 1200px) {
-
-  h1,
-  .h1 {
-    font-size: 1.7rem;
-  }
-}
-
-h2,
-.h2 {
-  font-size: calc(1.05rem + 0.95vw);
-}
-
-@media (min-width: 1200px) {
-
-  h2,
-  .h2 {
-    font-size: 1.05rem;
-  }
-}
-
-h3,
-.h3 {
-  font-size: calc(.95rem + 0.85vw);
-}
-
-@media (min-width: 1200px) {
-
-  h3,
-  .h3 {
-    font-size: 1rem;
-  }
-}
-
-h4,
-.h4 {
-  font-size: calc(.85rem + 0.65vw);
-}
-
-@media (min-width: 1200px) {
-
-  h4,
-  .h4 {
-    font-size: 1.15rem;
-  }
-}
-
-h5,
-.h5 {
-  font-size: .75rem;
-}
-
-h6,
-.h6 {
-  font-size: 0.7rem;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
 abbr[title],
 abbr[data-bs-original-title] {
   text-decoration: underline;
@@ -784,7 +717,7 @@ progress {
   }
 
   .spacer {
-  
+
     padding: 50px 0;
   }
 
@@ -21037,9 +20970,9 @@ label {
   text-indent: 1.5rem;
 }
 
-#related-product .card h3{
+#related-product .card h3 {
   font-size: 18px;
-} 
+}
 
 #related-product .card:hover .title {
   background-color: #07528d !important;
@@ -21052,14 +20985,14 @@ label {
   transition: 0.5s;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .box-header h1 {
     font-size: 26px;
-}
+  }
 }
 
-@media(max-width: 576px){
+@media(max-width: 576px) {
   .box-header h1 {
     font-size: 24px;
-}
+  }
 }

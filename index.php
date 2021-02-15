@@ -64,11 +64,11 @@
         <div class="row justify-content-center">
           <div class="col-lg-10 col-md-12 text-center">
             <h1 class="fw-bold">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h1>
-            <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <h4 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et
               dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-              lacus vel facilisis. </h5>
-            <div class="row justify-content-center">
+              lacus vel facilisis. </h4>
+            <div class="row justify-content-center mt-3">
               <div class="col-lg-9 col-md-12">
                 <div class="row g-2">
                   <div class="col-lg-4 col-md-4">
