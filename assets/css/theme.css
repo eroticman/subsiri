@@ -20995,4 +20995,7 @@ label {
   .box-header h1 {
     font-size: 24px;
   }
+  h1{
+    font-size: 22px;
+  }
 }
