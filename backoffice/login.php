@@ -5,7 +5,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Log In | ทรัพย์ศิริ</title>
+  <title>เข้าสู่ระบบ | ทรัพย์ศิริ</title>
   <link href="assets/login/css/fontface.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/login/css/reset.min.css">
   <link rel="stylesheet" href="assets/login/css/style.css">

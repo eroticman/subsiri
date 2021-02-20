@@ -38,7 +38,7 @@ require_once 'auth.php';
 				<li class="nav-item dropdown">
 					<a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
 						<span class="avatar avatar-online">
-							<img src="assets/images/logo.png" alt="Administrator">
+							<img src="../assets/img/fav.jpg" alt="Administrator">
 							<i></i>
 						</span>
 					</a>
@@ -73,6 +73,12 @@ require_once 'auth.php';
 								<span class="site-menu-title">แบนเนอร์</span>
 							</a>
 						</li>
+						<li class="site-menu-item <?php echo ( in_array($current_file, array('about_us.php', 'about_us_add.php', 'about_us_edit.php') ) ) ? 'active' : ''; ?>">
+							<a class="animsition-link" href="about_us.php">
+								<i class="site-menu-icon icon fa-paper-plane" aria-hidden="true"></i>
+								<span class="site-menu-title">เกี่ยวกับเรา</span>
+							</a>
+						</li>
 						<li class="site-menu-item <?php echo ( in_array($current_file, array('product.php', 'product_add.php', 'product_edit.php') ) ) ? 'active' : ''; ?>">
 							<a class="animsition-link" href="product.php">
 								<i class="site-menu-icon icon fa-product-hunt" aria-hidden="true"></i>
@@ -83,6 +89,12 @@ require_once 'auth.php';
 							<a class="animsition-link" href="customer.php">
 								<i class="site-menu-icon icon fa-user-circle" aria-hidden="true"></i>
 								<span class="site-menu-title">ลูกค้าของเรา</span>
+							</a>
+						</li>
+						<li class="site-menu-item <?php echo ( in_array($current_file, array('contact_us.php', 'contact_us_add.php', 'contact_us_edit.php') ) ) ? 'active' : ''; ?>">
+							<a class="animsition-link" href="contact_us.php">
+								<i class="site-menu-icon icon fa-phone" aria-hidden="true"></i>
+								<span class="site-menu-title">ติดต่อเรา</span>
 							</a>
 						</li>
 					<?php endif ?>
