@@ -741,6 +741,31 @@ function product_edit() {
 	return $updated;
 }
 
+
+function changStatus() {
+	$pid	= $_POST['p_best'];
+	$status	= $_POST['is_best'];
+
+	$sql = "UPDATE db_product
+			SET is_best = '{$_POST['is_best']}'
+			WHERE id = '{$pid}'";
+	// exit;
+	if ($status == '0') {
+		$sqlA	= "UPDATE db_product 
+					SET is_best = '0' 
+					WHERE id = '{$pid}'";
+	} elseif ($status == '1') {
+		$sqlA	= "UPDATE db_product 
+					SET is_best = '1' 
+					WHERE id = '{$pid}'";
+	}
+	query($sqlA);
+
+	$updated = query($sql);
+
+	return $updated;
+}
+
 function contact_us_list()
 {
 	$sql	= "SELECT *

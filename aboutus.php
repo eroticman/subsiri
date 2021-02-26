@@ -44,6 +44,12 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
+  <?php 
+    include 'config/init.php';
+
+		$about_us_text = about_us_text();
+
+  ?>
   <main class="main">
 
     <section class="py-3" id="header">
@@ -62,23 +68,12 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-12 mb-3">
-            <img src="assets/img/about.jpg" class="img-fluid rounded shadow-lg" alt="subsiri">
+            <img src="img/about_us/<?php echo $about_us_text[0]->id; ?>/<?php echo $about_us_text[0]->img_cover; ?>" class="img-fluid rounded shadow-lg" alt="<?php echo $about_us_text[0]->about_name; ?>">
           </div>
           <div class="col-lg-6 col-md-12 mb-3 text-start my-auto">
             <h2>เกี่ยวกับเรา</h2>
-            <h1 class="fw-bold text-blue">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h1>
-            <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-              lacus vel facilisis. </h5>
-            <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-              lacus vel facilisis. </h5>
-            <h5 class="lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et
-              dolore magna aliqua.<br> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-              lacus vel facilisis. </h5>
+            <h1 class="fw-bold text-blue"><?php echo $about_us_text[0]->about_name; ?></h1>
+            <h5 class="lh-base"><?php echo $about_us_text[0]->description; ?></h5>
           </div>
         </div>
       </div>

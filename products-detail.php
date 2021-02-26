@@ -1,3 +1,8 @@
+<?php 
+	include 'config/init.php';
+	$product_detail = product_detail($_GET['id']);
+	$product_img_list  = product_img_list($_GET['id']);
+?>
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -7,13 +12,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="จำหน่ายอุปกรณ์การสื่อสาร สำหรับงานติดตั้ง เดินระบบสายสัญญาณ ภายนอก ภายในอาคาร ราคาถูก คุณภาพดี">
-  <meta name="keywords" content="ทรัพย์ศิริ">
+  <meta name="keywords" content="<?php echo $product_detail->key_word; ?>">
   <meta name="author" content="Cyber Winner">
+
+	<!-- <base href="https://subsiri.com/product"> -->
 
   <!-- ===============================================-->
   <!--    Document Title-->
   <!-- ===============================================-->
-  <title>รายละเอียดสินค้า | ทรัพย์ศิริ</title>
+  <title><?php echo $product_detail->product_name; ?> | ทรัพย์ศิริ</title>
 
 
   <!-- ===============================================-->
@@ -65,115 +72,47 @@
             <div class="fotorama border shadow-sm" data-arrows="true" data-height="400" data-nav="thumbs"
               data-allowfullscreen="true" data-loop="true" data-autoplay="true" data-transition="dissolve"
               data-arrows="true" data-click="true" data-swipe="false" data-trackpad="true">
-              <img src="assets/img/product/12896508465819.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508549188.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508477921.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508500634.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508532110.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508465819.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508549188.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508477921.jpg" alt="subsiri">
-              <img src="assets/img/product/12896508500634.jpg" alt="subsiri">
+              <?php foreach ($product_img_list as $imgDetail) : ?>
+                <img src="img/product/<?php echo $imgDetail->product_id; ?>/<?php echo $imgDetail->img_name; ?>" alt="<?php echo $product_detail->product_name; ?>">
+              <?php endforeach ?>
             </div>
           </div>
           <div class="col-lg-7 col-md-6 mb-3 order-md-1 order-0">
-            <h3><b>ชื่อ :</b> กิ๊บตอกสายไฟ</h3>
+            <h3><b>ชื่อ :</b> <?php echo $product_detail->product_name; ?></h3>
             <hr>
-            <h5 class="lh-base"><b>ราคา :</b> 35 บาท</h5>
-            <h5 class="lh-base"><b>ขนาด :</b> 10X12 ซม.</h5>
+            <h5 class="lh-base"><b>ราคา :</b> <?php echo $product_detail->price; ?> บาท</h5>
+            <h5 class="lh-base"><b>ขนาด :</b> <?php echo $product_detail->size; ?></h5>
             <h5 class="lh-base"><b>รายละเอียด :</b> </h5>
-            <h5 class="text-indent lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-              viverra maecenas accumsan lacus vel facilisis.</h5>
-            <h5 class="text-indent lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-              viverra maecenas accumsan lacus vel facilisis.</h5>
-            <h5 class="text-indent lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-              viverra maecenas accumsan lacus vel facilisis.</h5>
+            <?php echo $product_detail->description; ?>
           </div>
         </div>
       </div>
     </section>
 
+    <?php 
+      $product_related = product_related();
+    ?>
     <section class="bg-gray spacer" id="related-product">
       <div class="container">
         <div class="row">
           <div class="col-12 mb-3 text-center">
             <h1 class="fw-bolder text-white bg-blue p-2">สินค้าที่เกี่ยวข้อง</h1>
           </div>
+          <?php foreach ($product_related as $releated) : ?>
           <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
+            <a href="products-detail?id=<?php echo $releated->id; ?>">
+            <!-- <a href="product/<?php echo $releated->id; ?>/<?php echo $releated->url_name; ?>"> -->
               <div class="card rounded-0 border shadow">
                 <div class="slide-box-img">
-                  <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
+                  <img src="img/product/<?php echo $releated->id; ?>/<?php echo $releated->img_cover; ?>" class="d-block w-100" alt="<?php echo $releated->product_name; ?>" class="d-block w-100" alt="<?php echo $releated->product_name; ?>">
                 </div>
                 <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
+                  <h3 class="text-blue mb-0"><?php echo $releated->product_name; ?></h3>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                </div>
-              </div>
-            </a>
-          </div>
+          <?php endforeach ?>
         </div>
       </div>
     </section>

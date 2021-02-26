@@ -1,12 +1,14 @@
+<?php 
+    $aboutus_text = about_us_text();
+    $contact_list = contact_list();
+?>
 <footer id="footer" class="py-md-5 py-3">
     <div class="container">
         <div class="row">
             <div class="col-md-4 text-white">
                 <h3 class="text-white">เกี่ยวกับเรา</h3>
                 <hr class="d-md-none d-block">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-                    accumsan lacus vel facilisis.</p>
+                <p><?php echo $aboutus_text[0]->description; ?></p>
             </div>
             <div class="col-md-3 text-white">
                 <h3 class="text-white">ผังเว็บไซต์</h3>
@@ -24,12 +26,24 @@
             <div class="col-md-5 text-white">
                 <h3 class="text-white">ติดต่อเรา</h3>
                 <hr class="d-md-none d-block">
-                <h4 class="text-white ">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h4>
-                <p class="mb-md-0 mb-2">ที่อยู่ : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</p>
-                <p class="mb-md-0 mb-2">เวลาทำการ : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</p>
-                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:02-1590325">02-1590325</a></p>
-                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:094-6474982">094-6474982</a></p>
-                <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:099-0547456">099-0547456</a></p>
+                <h4 class="text-white "><?php echo $contact_list[0]->contact_name; ?></h4>
+                <p class="mb-md-0 mb-2">ที่อยู่ : <?php echo $contact_list[0]->contact_address; ?></p>
+                <p class="mb-md-0 mb-2">เวลาทำการ : <?php echo $contact_list[0]->date_time; ?></p>
+                <?php if (!empty($contact_list[0]->phone_1)) : ?>
+                    <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:<?php echo $contact_list[0]->phone_1; ?>"><?php echo $contact_list[0]->phone_1; ?></a></p>
+                <?php endif ?>
+                <?php if (!empty($contact_list[0]->phone_2)) : ?>
+                    <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:<?php echo $contact_list[0]->phone_2; ?>"><?php echo $contact_list[0]->phone_2; ?></a></p>
+                <?php endif ?>
+                <?php if (!empty($contact_list[0]->phone_3)) : ?>
+                    <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:<?php echo $contact_list[0]->phone_3; ?>"><?php echo $contact_list[0]->phone_3; ?></a></p>
+                <?php endif ?>
+                <?php if (!empty($contact_list[0]->phone_4)) : ?>
+                    <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:<?php echo $contact_list[0]->phone_4; ?>"><?php echo $contact_list[0]->phone_4; ?></a></p>
+                <?php endif ?>
+                <?php if (!empty($contact_list[0]->phone_5)) : ?>
+                    <p class="text-white mb-1"><i class="fas fa-phone-square-alt"></i> : <a class="text-white" href="tel:<?php echo $contact_list[0]->phone_5; ?>"><?php echo $contact_list[0]->phone_5; ?></a></p>
+                <?php endif ?>
             </div>
         </div>
         <div class="row">

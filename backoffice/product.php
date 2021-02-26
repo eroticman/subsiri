@@ -52,6 +52,20 @@
 
 	<?php $current_file = basename(__FILE__); ?>
 	<?php include 'header.php'; ?>
+	<?php
+		if(!empty($_POST))
+		{	
+			if(changStatus())
+			{
+				echo '<script>
+					alert("แก้ไขสถานะสินค้าสำเร็จ");
+					window.location.href = "product.php"
+					</script>';
+				exit;
+			}
+		} 
+	?>
+
 	<?php $product_list = product_list(); ?>
 
 	<!-- Page -->
@@ -97,6 +111,10 @@
 			                    							<div class="th-inner ">รูปภาพ</div>
 			                    							<div class="fht-cell"></div>
 			                    						</th>
+			                    						<th style="" data-field="status">
+			                    							<div class="th-inner text-center">สถานะสินค้า</div>
+			                    							<div class="fht-cell"></div>
+			                    						</th>
 			                    						<th style="" data-field="">
 			                    							<div class="th-inner ">แก้ไขล่าสุด</div>
 			                    							<div class="fht-cell"></div>
@@ -117,6 +135,24 @@
 			                  							<td class=""><?php echo $i+1; ?></td> 
 			                  							<td style=""><?php echo $product_detail->product_name; ?></td>
 			                  							<td style=><img src="../img/product/<?php echo $product_detail->id; ?>/<?php echo $product_detail->img_cover; ?>" style="width:200px;"></td>
+														<td class="td-stock text-center">
+															<form method="POST">
+																<input type="hidden" name="p_best"
+																	value="<?php echo $product_detail->id; ?>">
+																<div class="form-group">
+																	<select class="form-control" id="is_best"
+																		name="is_best" onchange="this.form.submit()">
+																		<option value="0"
+																			<?php echo ($product_detail->is_best == '0') ? 'selected' : ''; ?>>
+																			สินค้าปกติ</option>
+																		<option value="1"
+																			<?php echo ($product_detail->is_best == '1') ? 'selected' : ''; ?>>
+																			สินค้าขายดี
+																		</option>
+																	</select>
+																</div>
+															</form>
+														</td>
 			                  							<td style="">
 														  <?php if(!empty($product_detail->updated)) {
 																  echo date("d/m/Y", strtotime( $product_detail->updated ) ); 

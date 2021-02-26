@@ -44,17 +44,34 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
+  <?php 
+    include 'config/init.php';
+
+		$banner_list = banner_list();
+
+  ?>
   <main class="main" id="banner-slide">
 
     <section class="py-0">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/banner.jpg" class="d-block w-100" alt="subsiri">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/banner.jpg" class="d-block w-100" alt="subsiri">
-          </div>
+        <?php 
+					$i = 0;
+					foreach ($banner_list as $banner_detail) : 
+        ?>
+          <?php if ($i == '0') : ?>
+            <div class="carousel-item active">
+              <img src="img/banner/<?php echo $banner_detail->id; ?>/<?php echo $banner_detail->img_cover; ?>" alt="<?php echo $banner_detail->banner_name; ?>" class="d-block w-100" alt="subsiri">
+            </div>
+          <?php else : ?>
+            <div class="carousel-item">
+              <img src="img/banner/<?php echo $banner_detail->id; ?>/<?php echo $banner_detail->img_cover; ?>" alt="<?php echo $banner_detail->banner_name; ?>" class="d-block w-100" alt="subsiri">
+            </div>
+          <?php endif ?>
+        <?php 
+					$i++;
+          endforeach 
+        ?>
         </div>
       </div>
     </section>
@@ -114,62 +131,26 @@
           <div class="col-12 mb-md-4 mb-3">
             <div class="carousel-wrap owl-theme">
               <div class="owl-carousel owl-theme">
+              <?php 
+                $best_index = best_index();
+                foreach ($best_index  as $best_detail) : 
+              ?>
                 <div class="item">
-                  <a href="products-detail">
+                  <a href="products-detail?id=<?php echo $best_detail->id; ?>">
+					        <!-- <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>"> -->
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
                       <div class="slide-box-img">
-                        <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
+                        <img src="img/product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->img_cover; ?>" class="d-block w-100" alt="<?php echo $best_detail->product_name; ?>">
                       </div>
                       <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
+                        <h3 class="text-blue mb-0"><?php echo $best_detail->product_name; ?></h3>
                       </div>
                     </div>
                   </a>
                 </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              <?php endforeach ?>
               </div>
             </div>
           </div>
@@ -193,49 +174,41 @@
               </span>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="customer-img">
-                <img src="assets/img/customer/cus.jpg" class="d-block w-100" alt="subsiri">
-              </div>
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-              <div class="customer-img">
-                <img src="assets/img/customer/67495447_922426294798671_4745372304354050048_o.jpg" class="d-block w-100"
-                  alt="subsiri">
+          <?php 
+            $customer_index = customer_index();
+            $i = 0;
+            foreach ($customer_index as $customer_detail) :
+          ?>
+            <?php if ( $i%2 == 0 ) : ?>
+            <div class="col-md-4 mb-3">
+              <div class="card rounded-0 bg-blue-2 p-3">
+                <div class="customer-img">
+                  <img src="img/review/<?php echo $customer_detail->id; ?>/<?php echo $customer_detail->img_cover; ?>" class="d-block w-100" alt="subsiri">
+                </div>
+                <div class="content text-center py-3">
+                  <h3 class="text-white"><?php echo $customer_detail->review_name; ?></h3>
+                  <p class="text-white text-start"><?php echo $customer_detail->description; ?></p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4 mb-3">
-            <div class="card rounded-0 bg-blue-2 p-3">
-              <div class="customer-img">
-                <img src="assets/img/customer/SCG-EXPRESS_COOL-TA-Q-BIN-4-780x437.jpg" class="d-block w-100"
-                  alt="subsiri">
+            <?php else : ?>
+              <div class="col-md-4 mb-3">
+              <div class="card rounded-0 bg-blue-2 p-3">
+                <div class="content text-center py-3">
+                  <h3 class="text-white"><?php echo $customer_detail->review_name; ?></h3>
+                  <p class="text-white text-start"><?php echo $customer_detail->description; ?></p>
+                </div>
+                <div class="customer-img">
+                  <img src="img/review/<?php echo $customer_detail->id; ?>/<?php echo $customer_detail->img_cover; ?>" class="d-block w-100"
+                    alt="subsiri">
+                </div>
               </div>
-              <div class="content text-center py-3">
-                <h3 class="text-white">ขอขอบพระคุณลูกค้า</h3>
-                <p class="text-white text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
+            </div>
+            <?php endif ?>
+          <?php 
+            $i++;
+            endforeach 
+          ?>
             </div>
           </div>
 

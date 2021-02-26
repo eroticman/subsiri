@@ -44,6 +44,11 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
+  <?php 
+    include 'config/init.php';
+    $best_index = best_index();
+    $product_list = product_list();
+  ?>
   <main class="main">
 
     <section class="py-3" id="header">
@@ -66,62 +71,23 @@
             <hr>
             <div class="carousel-wrap owl-theme">
               <div class="owl-carousel owl-theme">
+              <?php foreach ($best_index  as $best_detail) : ?>
                 <div class="item">
-                  <a href="products-detail">
+                  <a href="products-detail?id=<?php echo $best_detail->id; ?>">
+					        <!-- <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>"> -->
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
                       <div class="slide-box-img">
-                        <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
+                        <img src="img/product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->img_cover; ?>" class="d-block w-100" alt="<?php echo $best_detail->product_name; ?>">
                       </div>
                       <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
+                        <h3 class="text-blue mb-0"><?php echo $best_detail->product_name; ?></h3>
                       </div>
                     </div>
                   </a>
                 </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="products-detail">
-                    <div class="card rounded-0 position-relative">
-                      <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
-                        alt="subsiri">
-                      <div class="slide-box-img">
-                        <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                      </div>
-                      <div class="bg-white text-center py-3 title">
-                        <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+              <?php endforeach ?>
               </div>
             </div>
           </div>
@@ -137,117 +103,55 @@
             <h1 class="fw-bolder text-blue">สินค้าทั้งหมด</h1>
             <hr>
           </div>
+          <?php foreach ($product_list as $detail) : ?>
           <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
+            <a href="products-detail?id=<?php echo $detail->id; ?>">
+            <!-- <a href="product/<?php echo $detail->id; ?>/<?php echo $detail->url_name; ?>"> -->
               <div class="card rounded-0 border shadow">
                 <div class="slide-box-img">
-                  <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
+                  <img src="img/product/<?php echo $detail->id; ?>/<?php echo $detail->img_cover; ?>" class="d-block w-100" alt="<?php echo $detail->product_name; ?>" class="d-block w-100" alt="<?php echo $detail->product_name; ?>">
                 </div>
                 <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
+                  <h3 class="text-blue mb-0"><?php echo $detail->product_name; ?></h3>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                </div>
-              </div>
-            </a>
-          </div>
+          <?php endforeach ?>
 
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508465819.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">กิ๊บตอกสายไฟ</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508435346.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">พรีฟอร์ม</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508532110.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">เคเบิลไทม์</h3>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail">
-              <div class="card rounded-0 border shadow">
-                <div class="slide-box-img">
-                  <img src="assets/img/product/12896508549188.jpg" class="d-block w-100" alt="subsiri">
-                </div>
-                <div class="bg-white text-center py-3 title">
-                  <h3 class="text-blue mb-0">ผ้าเทปดำพันสายไฟ</h3>
-                </div>
-              </div>
-            </a>
-          </div>
+          <?php 
+            $total = product_count();
+
+            $pagination = pagination( $total->counter, 8);
+          ?>  
 
           <div class="col-12 mx-auto mt-3">
             <nav>
               <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link " href="#" tabindex="-1" aria-disabled="true"> <span
-                      aria-hidden="true">&laquo;</span></a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#"> <span aria-hidden="true">&raquo;</span></a>
-                </li>
+                <?php if ( $pagination['total'] > 0 ) : ?>
+                  <?php if ( $pagination['prev'] ) : ?>
+                    <li class="page-item">
+                      <a class="page-link" href="products?page=<?php echo $pagination['prev']; ?>"><</a>
+                    </li>
+                  <?php endif; ?>
+                  <?php for ( $i = 1; $i <= $pagination['total']; $i++ ) : ?>
+                    <?php 
+                      $page1 = $pagination['page'] - 2;
+                      $page2 = $pagination['page'] + 2;
+
+                      if ( ( $i == 1 ) or ( $i == $pagination['total'] ) or ( $i >= $page1 and $i <= $page2 ) ) :
+                    ?>
+                        <li class="page-item <?php echo ($i == $pagination['page']) ? 'active' : ''; ?>"><a class="page-link" href="products?page=<?php echo $i; ?>" ><?php echo $i; ?></a></li>
+                    <?php elseif ( ( ( $i > 1 ) and ( $i == ( $page1 - 1 ) ) ) or ( ( $i < $pagination['total'] ) and ( $i == ( $page2 + 1 ) ) ) ) : ?>
+                        <li class="page-item"><a href="#" class="page-link">...</a></li>
+                    <?php endif ?>
+                  <?php endfor ?>
+                  <?php if ( $pagination['total'] != $pagination['page'] ) : ?>
+                    <li class="page-item">
+                      <a class="page-link " href="products?page=<?php echo $pagination['next']; ?>">></a>
+                    </li>
+                  <?php endif ?>
+              <?php endif ?>
               </ul>
             </nav>
           </div>
@@ -255,7 +159,7 @@
         </div>
       </div>
     </section>
-
+    
 
 
     <?php include 'footer.php'?>

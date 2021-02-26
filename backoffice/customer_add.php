@@ -85,9 +85,9 @@
 				                  	<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
 				                </div>
 								<div class="form-group" data-plugin="formMaterial">
-									<label class="form-control-label" for="detail">รายละเอียด</label>
-									<textarea class="form-control summernote" rows="4" placeholder="Detail" id="editor" name="description"></textarea>
-								</div>
+				                  	<label class="form-control-label" for="detail">รายละเอียด</label>
+				                  	<textarea rows="4" class="form-control" id="description" name="description"> </textarea>
+				                </div>
 								<div class="form-group form-material-file" data-plugin="formMaterial">
 				                  	<label class="form-control-label" for="image">รูปภาพหน้าปก</label>
 			                      	<input type="file" id="covImg" name="covImg" data-plugin="dropify" data-default-file="" data-allowed-file-extensions="png jpg"/>

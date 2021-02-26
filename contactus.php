@@ -44,6 +44,10 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
+  <?php 
+      include 'config/init.php';
+      $contact_list = contact_list();
+  ?>
   <main class="main">
 
     <section class="py-3" id="header">
@@ -63,19 +67,33 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-5 mb-3">
             <h2 class="text-white bg-blue p-2 mb-3">ข้อมูลติดต่อ</h2>
-            <h3 class="fw-bolder">บริษัท ทรัพย์ศิริ เทรดดิ้ง จำกัด</h3>
-            <h4 class="lh-base"><i class="fas fa-home text-blue"></i> : 41/6 หมู่ 2 ต.คลองสี่ อ.คลองหลวง จ.ปทุมธานี 12120</h4>
-            <h4 class="lh-base"><i class="far fa-clock text-blue"></i> : วันจันทร์-วันศุกร์ 8.00 -17.00 น วันเสาร์ 8.00-12.00น</h4>
+            <h3 class="fw-bolder"><?php echo $contact_list[0]->contact_name; ?></h3>
+            <h4 class="lh-base"><i class="fas fa-home text-blue"></i> : <?php echo $contact_list[0]->contact_address; ?>120</h4>
+            <h4 class="lh-base"><i class="far fa-clock text-blue"></i> : <?php echo $contact_list[0]->date_time; ?></h4>
+            <?php if (!empty($contact_list[0]->phone_1)) : ?>
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
-                href="tel:02-1590325">02-1590325</a></h4>
+                href="tel:<?php echo $contact_list[0]->phone_1; ?>"><?php echo $contact_list[0]->phone_1; ?></a></h4>
+            <?php endif ?>
+            <?php if (!empty($contact_list[0]->phone_2)) : ?>
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
-                href="tel:094-6474982">094-6474982</a></h4>
+                href="tel:<?php echo $contact_list[0]->phone_2; ?>"><?php echo $contact_list[0]->phone_2; ?></a></h4>
+            <?php endif ?>
+            <?php if (!empty($contact_list[0]->phone_3)) : ?>
             <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
-                href="tel:099-0547456">099-0547456</a></h4>
+                href="tel:<?php echo $contact_list[0]->phone_3; ?>"><?php echo $contact_list[0]->phone_3; ?></a></h4>
+            <?php endif ?>
+            <?php if (!empty($contact_list[0]->phone_4)) : ?>
+            <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
+                href="tel:<?php echo $contact_list[0]->phone_4; ?>"><?php echo $contact_list[0]->phone_4; ?></a></h4>
+            <?php endif ?>
+            <?php if (!empty($contact_list[0]->phone_5)) : ?>
+            <h4><i class="fas fa-phone-square-alt text-blue"></i> : <a class="text-dark"
+                href="tel:<?php echo $contact_list[0]->phone_5; ?>"><?php echo $contact_list[0]->phone_5; ?></a></h4>
+            <?php endif ?>
           </div>
           <div class="col-md-7 mb-3">
             <iframe class="border shadow"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.8438232957105!2d100.68691311534859!3d14.027270194628326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d803c4167a9c9%3A0x1a5fdd6be9e67574!2z4Lia4Lij4Li04Lip4Lix4LiXIOC4l-C4o-C4seC4nuC4ouC5jOC4qOC4tOC4o-C4tCDguYDguJfguKPguJTguJTguLTguYnguIcg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v1613285413441!5m2!1sth!2sth"
+              src="<?php echo $contact_list[0]->google_map; ?>"
               width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
           </div>
@@ -88,23 +106,23 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">ชื่อ</label>
-                    <input type="text" class="form-control" placeholder="Name">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">อีเมล์</label>
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="email" class="form-control" id="email"  placeholder="Email">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">เบอร์โทรศัพท์</label>
-                    <input type="text" class="form-control" placeholder="Phone Number">
+                    <input type="text" class="form-control" id="phone" placeholder="Phone Number">
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="exampleFormControlInput1" class="form-label">เรื่องติดต่อ</label>
-                    <input type="text" class="form-control" placeholder="Subject">
+                    <input type="text" class="form-control" id="subject"  placeholder="Subject">
                   </div>
                   <div class="col-md-12 mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">รายละเอียด</label>
-                    <textarea class="form-control" id="" rows="3" placeholder="Description"></textarea>
+                    <textarea class="form-control" id="" rows="3" id="description" placeholder="Description"></textarea>
                   </div>
                   <div class="col-12 mt-3 text-center">
                     <button type="submit" class="btn btn-primary col-md-3">ส่งข้อความ</button>
@@ -137,6 +155,28 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
+  
+	<script type="text/javascript">
+              function sendEmail() {
+                  var data = {
+                      name: $("#name").val(),
+                      email: $("#email").val(),
+                      phone: $("#phone").val(),
+                      subject: $("#subject").val(),
+                      message: $("#description").val()
+                  };
+                  $.ajax({
+                      type: "POST",
+                      url: "mail.php",
+                      data: data,
+                      success: function(result){
+                          // $('.success').fadeIn(1000);
+                          alert('ส่งข้อความเรียบร้อย');
+                          $('#contact-form')[0].reset();
+                      }
+                  });
+              }
+    </script>
 </body>
 
 </html>

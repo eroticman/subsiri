@@ -44,6 +44,11 @@
   <!--    Main Content-->
   <!-- ===============================================-->
   <?php include 'header.php' ?>
+  <?php 
+      include 'config/init.php';
+
+      $customer_list = customer_list();
+  ?>
   <main class="main">
 
     <section class="py-3" id="header">
@@ -61,114 +66,75 @@
     <section class="spacer" id="customer-us">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="customer-img">
-                <img src="assets/img/customer/cus.jpg" class="d-block w-100" alt="subsiri">
+        <?php 
+          $i = 0;
+          foreach ($customer_list as $customer_detail) :
+        ?>
+            <?php if ( $i%2 == 0 ) : ?>
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card rounded border shadow overflow-hidden">
+                  <div class="customer-img">
+                    <img src="img/review/<?php echo $customer_detail->id; ?>/<?php echo $customer_detail->img_cover; ?>" class="d-block w-100" alt="subsiri">
+                  </div>
+                  <div class="content text-center p-3">
+                    <h3 class=""><?php echo $customer_detail->review_name; ?></h3>
+                    <p class=" text-start"><?php echo $customer_detail->description; ?></p>
+                  </div>
+                </div>
               </div>
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
+            <?php else : ?>
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card rounded border shadow overflow-hidden">
+                  <div class="content text-center p-3">
+                    <h3 class="">ขอขอบพระคุณลูกค้า</h3>
+                    <p class=" text-start"><?php echo $customer_detail->description; ?></p>
+                  </div>
+                  <div class="customer-img">
+                    <img src="img/review/<?php echo $customer_detail->id; ?>/<?php echo $customer_detail->img_cover; ?>" class="d-block w-100"
+                      alt="subsiri">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            <?php endif ?>
+          <?php 
+            $i++;
+            endforeach 
+          ?>
 
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-              <div class="customer-img">
-                <img src="assets/img/customer/67495447_922426294798671_4745372304354050048_o.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-            </div>
-          </div>
+          <?php 
+            $total = customer_count();
 
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="customer-img">
-                <img src="assets/img/customer/SCG-EXPRESS_COOL-TA-Q-BIN-4-780x437.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-              <div class="customer-img">
-                <img src="assets/img/customer/67495447_922426294798671_4745372304354050048_o.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="customer-img">
-                <img src="assets/img/customer/SCG-EXPRESS_COOL-TA-Q-BIN-4-780x437.jpg" class="d-block w-100"
-                  alt="subsiri">
-              </div>
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <div class="card rounded border shadow overflow-hidden">
-              <div class="content text-center p-3">
-                <h3 class="">ขอขอบพระคุณลูกค้า</h3>
-                <p class=" text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor
-                  incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                  viverra maecenas accumsan lacus vel facilisis. </p>
-              </div>
-              <div class="customer-img">
-                <img src="assets/img/customer/cus.jpg" class="d-block w-100" alt="subsiri">
-              </div>
-            </div>
-          </div>
-
+            $pagination = pagination( $total->counter, 6);
+          ?>  
 
           <div class="col-12 mx-auto mt-3">
             <nav>
               <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link " href="#" tabindex="-1" aria-disabled="true"> <span
-                      aria-hidden="true">&laquo;</span></a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#"> <span aria-hidden="true">&raquo;</span></a>
-                </li>
+              <?php if ( $pagination['total'] > 0 ) : ?>
+                <?php if ( $pagination['prev'] ) : ?>
+                  <li class="page-item">
+                    <a class="page-link" href="customer?page=<?php echo $pagination['prev']; ?>"><</a>
+                  </li>
+                <?php endif; ?>
+                <?php for ( $i = 1; $i <= $pagination['total']; $i++ ) : ?>
+                  <?php 
+                    $page1 = $pagination['page'] - 2;
+                    $page2 = $pagination['page'] + 2;
+
+                    if ( ( $i == 1 ) or ( $i == $pagination['total'] ) or ( $i >= $page1 and $i <= $page2 ) ) :
+                  ?>
+                      <li class="page-item <?php echo ($i == $pagination['page']) ? 'active' : ''; ?>"><a class="page-link" href="customer?page=<?php echo $i; ?>" ><?php echo $i; ?></a></li>
+                  <?php elseif ( ( ( $i > 1 ) and ( $i == ( $page1 - 1 ) ) ) or ( ( $i < $pagination['total'] ) and ( $i == ( $page2 + 1 ) ) ) ) : ?>
+                      <li class="page-item"><a href="#" class="page-link">...</a></li>
+                  <?php endif ?>
+                <?php endfor ?>
+
+                <?php if ( $pagination['total'] != $pagination['page'] ) : ?>
+                  <li class="page-item">
+                    <a class="page-link " href="customer?page=<?php echo $pagination['next']; ?>">></a>
+                  </li>
+                <?php endif ?>
+              <?php endif ?>
               </ul>
             </nav>
           </div>
@@ -176,7 +142,7 @@
       </div>
     </section>
 
-
+              
 
     <?php include 'footer.php'?>
 

@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteRule ^product/(.*)/(.*)$ products-detail.php?id=$1&url_name=$2
+
 Options +MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
