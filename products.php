@@ -73,8 +73,8 @@
               <div class="owl-carousel owl-theme">
               <?php foreach ($best_index  as $best_detail) : ?>
                 <div class="item">
-                  <a href="products-detail?id=<?php echo $best_detail->id; ?>">
-					        <!-- <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>"> -->
+                  <!-- <a href="products-detail?id=<?php echo $best_detail->id; ?>"> -->
+					        <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">
@@ -105,8 +105,8 @@
           </div>
           <?php foreach ($product_list as $detail) : ?>
           <div class="col-md-3 col-6 mb-3">
-            <a href="products-detail?id=<?php echo $detail->id; ?>">
-            <!-- <a href="product/<?php echo $detail->id; ?>/<?php echo $detail->url_name; ?>"> -->
+            <!-- <a href="products-detail?id=<?php echo $detail->id; ?>"> -->
+            <a href="product/<?php echo $detail->id; ?>/<?php echo $detail->url_name; ?>">
               <div class="card rounded-0 border shadow">
                 <div class="slide-box-img">
                   <img src="img/product/<?php echo $detail->id; ?>/<?php echo $detail->img_cover; ?>" class="d-block w-100" alt="<?php echo $detail->product_name; ?>" class="d-block w-100" alt="<?php echo $detail->product_name; ?>">

@@ -136,8 +136,8 @@
                 foreach ($best_index  as $best_detail) : 
               ?>
                 <div class="item">
-                  <a href="products-detail?id=<?php echo $best_detail->id; ?>">
-					        <!-- <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>"> -->
+                  <!-- <a href="products-detail?id=<?php echo $best_detail->id; ?>"> -->
+					        <a href="product/<?php echo $best_detail->id; ?>/<?php echo $best_detail->url_name; ?>">
                     <div class="card rounded-0 position-relative">
                       <img src="assets/img/corner.png" class="position-absolute top-0 start-0 z-index-1 w-25"
                         alt="subsiri">

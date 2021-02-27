@@ -15,7 +15,7 @@
   <meta name="keywords" content="<?php echo $product_detail->key_word; ?>">
   <meta name="author" content="Cyber Winner">
 
-	<!-- <base href="https://subsiri.com/product"> -->
+	<base href="https://subsiri.com/product">
 
   <!-- ===============================================-->
   <!--    Document Title-->
@@ -100,8 +100,8 @@
           </div>
           <?php foreach ($product_related as $releated) : ?>
           <div class="col-lg-2 col-md-4 col-6 mb-3">
-            <a href="products-detail?id=<?php echo $releated->id; ?>">
-            <!-- <a href="product/<?php echo $releated->id; ?>/<?php echo $releated->url_name; ?>"> -->
+            <!-- <a href="products-detail?id=<?php echo $releated->id; ?>"> -->
+            <a href="product/<?php echo $releated->id; ?>/<?php echo $releated->url_name; ?>">
               <div class="card rounded-0 border shadow">
                 <div class="slide-box-img">
                   <img src="img/product/<?php echo $releated->id; ?>/<?php echo $releated->img_cover; ?>" class="d-block w-100" alt="<?php echo $releated->product_name; ?>" class="d-block w-100" alt="<?php echo $releated->product_name; ?>">

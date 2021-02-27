@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2021 at 09:17 AM
+-- Generation Time: Feb 27, 2021 at 10:03 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.33
 
@@ -66,7 +66,7 @@ CREATE TABLE `db_admin` (
 --
 
 INSERT INTO `db_admin` (`id`, `group_id`, `full_name`, `username`, `password`, `ip`, `is_active`, `created`) VALUES
-(1, 1, 'Administrator', 'subsiri@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '::1', 1, '2021-02-13 19:09:26');
+(1, 1, 'Administrator', 'subsiric@subsiri.com', '751483cade288427cb666bfde23a88fb', '::1', 1, '2021-02-13 19:09:26');
 
 -- --------------------------------------------------------
 
